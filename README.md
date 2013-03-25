@@ -19,14 +19,14 @@ Notes
 Examples
 ================================================================================
 
-   $table=New Table();
-   $table->addRecord("Ena", "Pizza");
-   $table->addRecord("Duo", "Pasta", "Michael");
-   $table->addRecord("Tria", "Bacon");
-   $table->addRecord("", "", "", "", "", "Random cell");
+$table=New Table();
+$table->addRecord("Ena", "Pizza");
+$table->addRecord("Duo", "Pasta", "Michael");
+$table->addRecord("Tria", "Bacon");
+$table->addRecord("", "", "", "", "", "Random cell");
 
-   $table->makeHeader("Number", "Food", "Eater");
-   $table->makeHeader("Color", "Hobby", "Wigger", "Category");
-   
-   echo "<br />\n";
-   echo $table->tableToHTML();
+$table->makeHeader("Number", "Food", "Eater");
+$table->makeHeader("Color", "Hobby", "Wigger", "Category");
+
+echo "<br />\n";
+echo $table->tableToHTML();
