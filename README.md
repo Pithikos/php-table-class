@@ -2,20 +2,22 @@ Author:  Johan Hanssen Seferidis
 Created: 2013-03-25
 Updated: 2013-03-25
 
-
-===================================== Usage  ===================================
+Usage  
+================================================================================
 
 1. Make a table             $table=New Table();
 2. Make a header(optional)  $table->makeHeader("Name", "Lastname", "Food");
 3. Add a record             $table->addRecord("Jesus", "", "Fish");
 4. Create HTML code         echo $table->tableToHTML();
 
-===================================== Notes ====================================
+Notes
+================================================================================
 
 * Rows(and even the header) don't have to be the same size.
 * Header is optional and can be changed by calling makeHeader() more than once.
 
-==================================== Examples ==================================
+Examples
+================================================================================
 
    $table=New Table();
    $table->addRecord("Ena", "Pizza");
@@ -28,4 +30,3 @@ Updated: 2013-03-25
    
    echo "<br />\n";
    echo $table->tableToHTML();
-   
