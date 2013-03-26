@@ -2,7 +2,7 @@
 
 Author:  Johan Hanssen Seferidis
 Created: 2013-03-25
-Updated: 2013-03-25
+Updated: 2013-03-26
 License: Do whatever you want with it as long you don't kill someone
  
 
@@ -29,18 +29,25 @@ License: Do whatever you want with it as long you don't kill someone
 ---------------------------- Interface -----------------------------------------
 
 addRecord("Field1value", "Field2value", .. "FieldNvalue");
+
    Adds a record to the table. Header doesn't count as a record.
    All records don't need to be the same length. An empty string can be passed
    to leave a field empty.
 
+
 makeHeader("Header1", "Header2", .. "HeaderN");
+
    Makes a header row for the table. An empty string can be passed to leave
    a field empty.
+   
 
-addClassX("Classname", $X);
-   Adds class names on every cell on specific column($X).
+addClassX("Classname", X);
 
-addClassRowEvery("Classname", $n, $startingRow);
+   Adds class names on every cell on specific column(X).
+
+
+addClassRowEvery("Classname", n, startingRow);
+
    Adds class names on every n-th row starting from specific row.
    Header doesn't count as a row.
 
