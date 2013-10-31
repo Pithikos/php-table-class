@@ -13,7 +13,7 @@ License: Do whatever you want with it as long you don't kill someone
 1. Make a table             $table=New Table();
 3. Add records              $table->addRecord("Jesus", "Blue", "Fish");
                             $table->addRecord("Tesla", "", "Coil",);
-4. Create HTML code         echo $table->tableToHTML();
+3. Create HTML code         echo $table->tableToHTML();
 
 
 
@@ -35,20 +35,21 @@ addRecord("Field1value", "Field2value", .. "FieldNvalue");
    to leave a field empty.
 
 
-makeHeader("Header1", "Header2", .. "HeaderN");
+makeHeader("HeaderField1", "HeaderField2", .. "HeaderFieldN");
 
-   Makes a header row for the table. An empty string can be passed to leave
-   a field empty.
+   Makes a header row for the table. An empty string can be passed to have an
+   empty header.
    
 
 addClassX("Classname", X);
 
-   Adds class names on every cell on specific column(X).
+   Adds class names on every cell on column X. Column numbering starts from 0.
 
 
 addClassRowEvery("Classname", n, startingRow);
 
-   Adds class names on every n-th row starting from specific row.
+   Adds class names on every n-th row starting from the startingRow. Row
+   numbering starts from 0.
    Header doesn't count as a row.
 
 
@@ -63,7 +64,7 @@ $table->addRecord("Duo", "Pasta", "Michael");
 $table->addRecord("Tria", "Bacon");
 $table->addRecord("", "", "", "", "", "Random cell");
 $table->makeHeader("Number", "Food", "Eater");
-$table->makeHeader("Color", "", "Wigger", "Category");
+$table->makeHeader("Color", "", "Tomorrow", "Category");
 echo $table->tableToHTML();
 
 
