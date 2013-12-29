@@ -3,7 +3,7 @@
  *
  * Description:
  *    A simple dynamic table class. You don't have to specify the table's size.
- *    The table grows automatically when it's needed.
+ *    The table grows automatically on need.
  * 
  * Created: 2013-03-25
  * Updated: 2013-03-26
@@ -32,13 +32,13 @@
 class Table
 {
    
-   private $data;         // the table's header
-   private $header;       // the actual table's data
+   private $header;       // the table's header
+   private $data;         // the actual table's data
    private $classesCells; // the classes of columns
    private $classesRows;  // the classes of rows
    private $biggestRow;   // number of cells of the longest row
 
-	public function __construct() {
+   public function __construct() {
       $this->data=array();
       $this->header=array();
       
@@ -46,7 +46,7 @@ class Table
       $this->classesRows=array();
       
       $this->biggestRow=0;
-	}
+   }
    
    
    /* Add/change header of table
@@ -154,7 +154,7 @@ class Table
       foreach($this->data as $row){ // per row
          $string.="\t<tr";
 
-         // If row classes should be added
+         // Add row classes
          if (!empty($this->classesRows))
          {
             if (!empty($this->classesRows[$rowNumber])) // add row class
@@ -168,7 +168,7 @@ class Table
          {
             $string.="\t\t<td";
             
-            // If cell classes should be added
+            // Add cell classes
             if (!empty($this->classesCells))
                if (!empty($this->classesCells[$rowNumber][$i])) // add cell class
                   $string.=" class='" . $this->classesCells[$rowNumber][$i] . "'";
